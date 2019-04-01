@@ -98,7 +98,7 @@ function buildMeetings() {
 
 function filterByNow(){
   const myTime = Number(`${start.getHours()}${start.getMinutes()}`)
-  let nextMeetingIndex = meetings.findIndex(meeting => Number(meeting.day)===today && Number(meeting.time.split(':').join(''))>myTime)
+  let nextMeetingIndex = meetings.findIndex(meeting => (Number(meeting.day)===today) && (Number(meeting.time.split(':').join('')))>myTime)
   // returns -1 if there are no more meetings that day
   if(nextMeetingIndex===-1){
     if(today===6){
