@@ -109,7 +109,7 @@ function filterByNow(){
   }
   let upcomingMeetings = meetings.slice(nextMeetingIndex, nextMeetingIndex+numOfMeetings);
   if(upcomingMeetings.length<numOfMeetings){
-    upcomingMeetings=[...upcomingMeetings, array.slice(0, numOfMeetings-upcomingMeetings.length)]
+    upcomingMeetings=[...upcomingMeetings.concat(meetings.slice(0, numOfMeetings-upcomingMeetings.length))]
   }
   console.log(upcomingMeetings.length)
   return upcomingMeetings;
