@@ -65,6 +65,10 @@ function buildMeetings() {
   if(Number(numBox.value)>meetings.length){
     numBox.value=meetings.length;
   }
+  if(Number(numBox.value)<1){
+    numBox.value=1;
+  }
+
   numOfMeetings = Number(numBox.value);
 
   let weekdayToday = weekdays[today]; //Parse the day number to a string
