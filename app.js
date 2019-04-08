@@ -62,6 +62,7 @@ function buildMeetings() {
       ul.removeChild(ul.lastChild);
     };
   };
+  
   numOfMeetings = Number(numBox.value);
   let weekdayToday = weekdays[today]; //Parse the day number to a string
   return filterByNow().map(function(meeting) { //The data is an array so we can map it
